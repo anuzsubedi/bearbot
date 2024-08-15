@@ -59,7 +59,7 @@ async def send_bear_photo():
             await channel.send("Failed to fetch bear photo")
 
         # Wait for an hour before sending the next photo
-        await asyncio.sleep(3600)  # Wait for 1 hour (3600 seconds)
+        await asyncio.sleep(60)  # Wait for 1 hour (3600 seconds)
 
 
 client.run(TOKEN)
