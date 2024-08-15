@@ -23,7 +23,7 @@ async def send_bear_photo():
     channel = client.get_channel(CHANNEL_ID)
     while True:
         # Generate a random page number between 1 and 2100
-        page_number = random.randint(1, 2100)
+        page_number = random.randint(1, 1000)
         print(f"Generated page number: {page_number}")
 
         # Query the Pexels API with the random page number
