@@ -8,6 +8,7 @@ TOKEN = os.environ.get("DISCORD_TOKEN")
 CHANNEL_ID = int(os.environ.get("DISCORD_CHANNEL_ID"))
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY")
 
+
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
@@ -22,7 +23,7 @@ async def on_ready():
 async def send_bear_photo():
     channel = client.get_channel(CHANNEL_ID)
     while True:
-        # Generate a random page number between 1 and 2100
+        # Generate a random page number between 1 and 1000
         page_number = random.randint(1, 1000)
         print(f"Generated page number: {page_number}")
 
