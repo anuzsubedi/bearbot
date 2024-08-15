@@ -30,7 +30,7 @@ async def send_bear_photo():
         # Query the Pexels API with the random page number
         query = "wild+bear"
         response = requests.get(
-            f"https://api.pexels.com/v1/search?query={query}&per_page=1&page={page_number}",
+            f"https://api.pexels.com/v1/search?query={query}&per_page=1&page={page_number}&orientation=landscape",
             headers={"Authorization": PEXELS_API_KEY},
         )
         data = response.json()
